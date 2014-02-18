@@ -54,11 +54,12 @@ function xmldb_block_gsb_upgrade($oldversion) {
 		
 	}
 	
-	if($oldversion <= '2013071502') {	
+	if($oldversion <= '2014021800') {	
         $xmlfield	=	new $xmldb_field( 'ids' );
         $xmlfield->$set_attributes(XMLDB_TYPE_int,'int', XMLDB_NOTNULL);
 		$dbman->change_field_type($table,$xmlfield);	
 	}	
+	
 	
 }
 
